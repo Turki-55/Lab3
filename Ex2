@@ -1,0 +1,19 @@
+
+def find_largest_number(numbers):
+    largest = numbers[0]
+    for num in numbers[1:]:
+        if num > largest:
+            largest = num
+    return largest
+
+
+number_list = []
+
+
+for i in range(1, 11):
+    value = float(input("Enter value #{}: ".format(i)))
+    number_list.append(value)
+
+
+largest_number = find_largest_number(number_list)
+print("\nThe largest number in the list is:", largest_number)
