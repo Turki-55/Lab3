@@ -1,0 +1,14 @@
+employee_salaries = {}
+
+while True:
+    name = input("Enter employee name (or 'no' to exit): ")
+
+    if name.lower() == 'no':
+        break
+
+    salary = float(input("Enter salary for {}: ".format(name)))
+    employee_salaries[name] = salary
+
+print("\nEmployee salaries dictionary:")
+for name, salary in employee_salaries.items():
+    print("{}: ${}".format(name, salary))
